@@ -15,7 +15,7 @@ const JWT_SECRET = process.env.JWT_SECRET || "CAMBIA_ESTE_SECRETO";
 const FRONTEND_URL = (process.env.FRONTEND_URL || "https://trayectoriaconsultores.com").replace(/\/$/, "");
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "";
 
-const DATA_DIR = path.join(__dirname, "data");
+const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, "data");
 const USERS_FILE = path.join(DATA_DIR, "users.json");
 const PROGRESS_FILE = path.join(DATA_DIR, "progress.json");
 const SITE_CONFIG_FILE = path.join(DATA_DIR, "site-config.json");
@@ -401,4 +401,5 @@ app.post("/create-checkout-session", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Trayectoria backend escuchando en puerto ${PORT}`);
+  console.log(`DATA_DIR usado: ${DATA_DIR}`);
 });
