@@ -1,5 +1,5 @@
 {
-  "name": "trayectoria-backend-plataforma-v2",
+  "name": "trayectoria-portal-v4",
   "version": "1.0.0",
   "main": "server.js",
   "type": "commonjs",
@@ -12,8 +12,6 @@
     "dotenv": "^16.4.7",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "nodemailer": "^6.9.16",
-    "stripe": "^17.5.0",
     "uuid": "^11.0.3"
   }
 }
